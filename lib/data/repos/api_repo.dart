@@ -711,7 +711,11 @@ class ApiRepo {
         Uri.parse(cashfreeUrlPan),
       );
 
-      request.headers.addAll({});
+      request.headers.addAll({
+        'Content-Type': "multipart/form-data",
+        'x-client-id': "",
+        'x-client-secret': "",
+      });
 
       request.files.add(http.MultipartFile(
         'front_image',
